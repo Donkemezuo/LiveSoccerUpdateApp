@@ -12,6 +12,18 @@ class ChampionsLeagueViewController: UIViewController {
     @IBOutlet weak var championsLeagueTableView: UITableView!
     var groupss = ["Group A","Group B","Group C","Group D","Group E","Group F","Group G","Group H"]
     
+    var groupA = [GroupStats]()
+    var groupB = [GroupStats]()
+    var groupC = [GroupStats]()
+    var groupD = [GroupStats]()
+    var groupE = [GroupStats]()
+    var groupF = [GroupStats]()
+    var groupG = [GroupStats]()
+    var groupH = [GroupStats]()
+    
+    var allLeagueGroups:[[GroupStats]] = /*[groupA,groupB,groupC,groupD,groupE,groupF,groupG,groupH]*/[[]]
+    
+    
     var championsLeagueGroupss = [GroupStats](){
         didSet {
             DispatchQueue.main.async {
@@ -35,6 +47,8 @@ class ChampionsLeagueViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        championsLeagueTableView.dataSource = self
+        allLeagueGroups = [groupA,groupB,groupC,groupD,groupE,groupF,groupG,groupH]
         SoccerLiveAPIClient.championsLeague { (error, leagueGroups) in
             if let error = error {
                 print("AppError: \(error)")
@@ -52,14 +66,37 @@ class ChampionsLeagueViewController: UIViewController {
               
             }
             
-        }
-championsLeagueTableView.dataSource = self
-        for (key, leagueNumber) in leagueDictionary {
+            for (key, leagueNumber) in self.leagueDictionary {
             
-            SoccerLiveAPIClient.championsLeagueGroupTable(groupID: leagueNumber) { (error, leagueGroup) in
-                
+            SoccerLiveAPIClient.championsLeagueGroupTable(groupID: leagueNumber) { (error, data) in
+                if let error = error {
+                    print("Error: \(error)")
+                } else if let data = data {
+                    self.championsLeagueGroupss = data
+                    dump(self.championsLeagueGroupss)
+                }
             }
             
+                for group in self.championsLeagueGroupss {
+                    if group.league_name == "Group A"{
+                        self.groupA.append(group)
+                    } else if group.league_name == "Group B"{
+                         self.groupB.append(group)
+                    } else if group.league_name == "Group C" {
+                        self.groupC.append(group)
+                    } else if group.league_name == "Group D"{
+                        self.groupD.append(group)
+                    } else if group.league_name == "Group E" {
+                        self.groupE.append(group)
+                    } else if group.league_name == "Group F"{
+                        self.groupF.append(group)
+                    } else if group.league_name == "Group G" {
+                        self.groupG.append(group)
+                    } else if group.league_name == "Group H" {
+                        self.groupH.append(group)
+                    }
+                   
+                }
          
             
         }
@@ -67,25 +104,19 @@ championsLeagueTableView.dataSource = self
 
    
 }
-
-
-
-//static func
-//
-//NetworkHelper.performDataTask(urlString: <#T##String#>, httpMethod: <#T##String#>, completionHandler: <#T##(Error?, Data?) -> Void#>)
-
-
+}
 
 
 extension ChampionsLeagueViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return championsLeagueGroups.count
+        return allLeagueGroups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = championsLeagueTableView.dequeueReusableCell(withIdentifier: "ChampionsLeagueCell", for: indexPath)
-        let league = championsLeagueGroups[indexPath.row]
-        cell.textLabel?.text = league.league_name
+        let league = allLeagueGroups[indexPath.row]
+    
+//        cell.textLabel?.text = league.league_name
         return cell
         
     }

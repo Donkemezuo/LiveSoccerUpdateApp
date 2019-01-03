@@ -90,11 +90,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-57-4uM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-8q-QQ2">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-57-4uM">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeagueTableCell" textLabel="2Pb-ZF-lox" detailTextLabel="ypl-2f-3Nu" style="IBUITableViewCellStyleValue1" id="qjT-JR-6ig" customClass="LeagueTableViewCell" customModule="LiveScoresApp" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeagueTableCell" textLabel="2Pb-ZF-lox" detailTextLabel="ypl-2f-3Nu" style="IBUITableViewCellStyleValue1" id="qjT-JR-6ig" customClass="LeagueTableViewCell" customModule="LiveScoresApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qjT-JR-6ig" id="tZa-ZW-Vs4">
@@ -117,11 +120,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPR-U5-IBG">
-                                <rect key="frame" x="-34" y="8" width="375" height="50"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPR-U5-IBG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <items>
                                     <navigationItem title="Premier League Table" id="BVJ-NX-gmo"/>
                                 </items>
@@ -129,9 +133,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OH8-8q-QQ2" firstAttribute="leading" secondItem="evW-iX-Ssl" secondAttribute="leading" id="6sQ-A5-neq"/>
+                            <constraint firstItem="OH8-8q-QQ2" firstAttribute="top" secondItem="EPR-U5-IBG" secondAttribute="bottom" id="Ccf-IP-CFg"/>
                             <constraint firstItem="EPR-U5-IBG" firstAttribute="top" secondItem="gei-7I-0l6" secondAttribute="top" id="EDu-bC-T5e"/>
                             <constraint firstItem="EPR-U5-IBG" firstAttribute="trailing" secondItem="evW-iX-Ssl" secondAttribute="trailing" id="F4B-YN-FiS"/>
+                            <constraint firstItem="OH8-8q-QQ2" firstAttribute="trailing" secondItem="evW-iX-Ssl" secondAttribute="trailing" id="SxS-aj-D6G"/>
                             <constraint firstItem="evW-iX-Ssl" firstAttribute="bottom" secondItem="YbE-57-4uM" secondAttribute="bottom" id="TBE-9z-lIB"/>
+                            <constraint firstItem="evW-iX-Ssl" firstAttribute="bottom" secondItem="OH8-8q-QQ2" secondAttribute="bottom" id="ZeA-Q6-Mid"/>
                             <constraint firstItem="YbE-57-4uM" firstAttribute="leading" secondItem="evW-iX-Ssl" secondAttribute="leading" id="a1k-hl-GCP"/>
                             <constraint firstItem="EPR-U5-IBG" firstAttribute="leading" secondItem="evW-iX-Ssl" secondAttribute="leading" id="j2F-dg-QlN"/>
                             <constraint firstItem="evW-iX-Ssl" firstAttribute="trailing" secondItem="YbE-57-4uM" secondAttribute="trailing" id="jWv-tm-Pm5"/>
@@ -141,6 +149,7 @@
                         <viewLayoutGuide key="safeArea" id="evW-iX-Ssl"/>
                     </view>
                     <connections>
+                        <outlet property="leagueImage" destination="OH8-8q-QQ2" id="0N2-i7-UdI"/>
                         <outlet property="leagueTableView" destination="YbE-57-4uM" id="OND-bP-hGi"/>
                     </connections>
                 </viewController>

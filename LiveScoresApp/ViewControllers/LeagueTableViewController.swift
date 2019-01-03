@@ -12,6 +12,7 @@ class LeagueTableViewController: UIViewController {
     
        var topLeagues = ["Premier League", "Champions League", "Europa League", "Spanish League", "Bundesliga","Italy"]
 
+    @IBOutlet weak var leagueImage: UIImageView!
     @IBOutlet weak var leagueTableView: UITableView!
     
     var leagueStanding = [TeamStandings]() {
@@ -27,7 +28,8 @@ class LeagueTableViewController: UIViewController {
         leagueTableView.dataSource = self
         getData()
         title = "Premier League Table"
-
+    
+        backgroundView()
     }
     
     func getData() {
@@ -42,7 +44,14 @@ class LeagueTableViewController: UIViewController {
             }
         }
     }
+    
+    func backgroundView(){
+        leagueImage.image = UIImage.init(named: "ELPLogo")
+    }
+    
 }
+
+
 
 extension LeagueTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
