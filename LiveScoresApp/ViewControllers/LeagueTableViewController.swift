@@ -21,7 +21,11 @@ class LeagueTableViewController: UIViewController {
         }
     }
     
-
+   
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,14 @@ class LeagueTableViewController: UIViewController {
         leagueImage.image = UIImage.init(named: "ELPLogo")
     }
     
+    
+    @IBAction func Back(_ sender: UIButton) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let centralView = storyBoard.instantiateViewController(withIdentifier: "mainVC") as! ViewController
+        present(centralView, animated: true, completion: nil)
+    }
+    
 }
 
 
@@ -61,13 +73,11 @@ extension LeagueTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //guard
             let cell = leagueTableView.dequeueReusableCell(withIdentifier: "LeagueTableCell", for: indexPath)
-            //as? LeagueTableViewCell else {return UITableViewCell()}
         
         let leagueStandings = leagueStanding[indexPath.row]
         cell.detailTextLabel?.text = "Points: \( leagueStandings.overall_league_PTS)"
         cell.textLabel?.text = leagueStandings.team_name
         return cell
     }
-    
     
 }

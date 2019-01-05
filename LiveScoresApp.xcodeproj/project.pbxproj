@@ -29,6 +29,7 @@
 		0453D56821D832C00019E645 /* LeagueEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56721D832C00019E645 /* LeagueEvents.swift */; };
 		0453D56A21D8336C0019E645 /* LeaguesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56921D8336C0019E645 /* LeaguesCollectionViewCell.swift */; };
 		0453D56C21D845A50019E645 /* PreferedLeagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56B21D845A50019E645 /* PreferedLeagues.swift */; };
+		04A6C9FB21E168940044350F /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C9FA21E168940044350F /* song.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		0453D56721D832C00019E645 /* LeagueEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueEvents.swift; sourceTree = "<group>"; };
 		0453D56921D8336C0019E645 /* LeaguesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0453D56B21D845A50019E645 /* PreferedLeagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferedLeagues.swift; sourceTree = "<group>"; };
+		04A6C9FA21E168940044350F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song.mp3; path = ../../../song.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		04052A1B21DC623D00DC344D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				04A6C9FA21E168940044350F /* song.mp3 */,
 				0453D55F21D831C90019E645 /* SecretKeys.swift */,
 				04052A2721DD36F800DC344D /* BackGroundAnimation.swift */,
 				0453D55D21D831B70019E645 /* NetworkHelper.swift */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0453D55621D831460019E645 /* LaunchScreen.storyboard in Resources */,
+				04A6C9FB21E168940044350F /* song.mp3 in Resources */,
 				0453D55321D831460019E645 /* Assets.xcassets in Resources */,
 				0453D55121D831440019E645 /* Main.storyboard in Resources */,
 				04052A2A21DD374400DC344D /* BackgroundViewAnimation.xib in Resources */,
