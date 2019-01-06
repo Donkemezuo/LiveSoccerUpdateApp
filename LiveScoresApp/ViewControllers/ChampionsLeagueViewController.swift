@@ -137,11 +137,6 @@ func getLeagueData() {
                     }
                     
                 }
-                
-                
-                
-                
-                
             }
             
         }

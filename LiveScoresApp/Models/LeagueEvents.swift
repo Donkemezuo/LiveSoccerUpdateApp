@@ -39,7 +39,7 @@ struct Events: Codable{
     var goalscorer: [GoalScorerInformation]
     var cards: [CardInformation]
     var lineup: Team
-    var statistics: Gamestatistics
+    var statistics: [Gamestatistics]
 }
 
 struct GoalScorerInformation: Codable {

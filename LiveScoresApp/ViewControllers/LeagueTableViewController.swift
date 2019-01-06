@@ -21,6 +21,14 @@ class LeagueTableViewController: UIViewController {
         }
     }
     
+    var leagueEvent = [Events](){
+        didSet{
+            DispatchQueue.main.async {
+                self.leagueTableView.reloadData()
+                
+            }
+        }
+    }
    
     
     
@@ -32,8 +40,8 @@ class LeagueTableViewController: UIViewController {
         leagueTableView.dataSource = self
         getData()
         title = "Premier League Table"
-    
         backgroundView()
+        getEventsData()
     }
     
     func getData() {
@@ -49,6 +57,19 @@ class LeagueTableViewController: UIViewController {
         }
     }
     
+    func getEventsData(){
+        SoccerLiveAPIClient.premierLeagueEvents { (appError, leagueEvents) in
+            if let appError = appError{
+                print("Error: \(appError)")
+            } else if let leagueEvents = leagueEvents {
+                self.leagueEvent = leagueEvents
+                
+            }
+            
+        }
+    }
+    
+    
     func backgroundView(){
         leagueImage.image = UIImage.init(named: "ELPLogo")
     }
@@ -61,6 +82,15 @@ class LeagueTableViewController: UIViewController {
         present(centralView, animated: true, completion: nil)
     }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let eventIndexPath = leagueTableView.indexPathForSelectedRow, let eventsDetails = segue.destination as? PremierLeagueDetailViewViewController else {return}
+        let event = leagueEvent[eventIndexPath.row]
+        eventsDetails.leagueEventt = event
+    }
+    
+    
 }
 
 
@@ -71,7 +101,6 @@ extension LeagueTableViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //guard
             let cell = leagueTableView.dequeueReusableCell(withIdentifier: "LeagueTableCell", for: indexPath)
         
         let leagueStandings = leagueStanding[indexPath.row]

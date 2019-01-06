@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W1j-S2-uIx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He4-Ad-Xnt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="400"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YCG-Ud-LLV">
-                                <rect key="frame" x="0.0" y="464" width="375" height="203"/>
+                                <rect key="frame" x="0.0" y="420" width="375" height="247"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jhb-Vy-Yww">
                                     <size key="itemSize" width="114" height="118"/>
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="118.29085457271366"/>
+            <point key="canvasLocation" x="1574" y="118"/>
         </scene>
         <!--League Table View Controller-->
         <scene sceneID="NzA-Ud-aC2">
@@ -121,6 +121,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Xvx-Dw-GmU" kind="show" id="rfn-bQ-iMT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -159,6 +162,7 @@
                         <viewLayoutGuide key="safeArea" id="evW-iX-Ssl"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VKD-tg-dW6"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="leagueImage" destination="OH8-8q-QQ2" id="0N2-i7-UdI"/>
@@ -167,7 +171,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tt6-V4-5d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="33"/>
+            <point key="canvasLocation" x="3247.1999999999998" y="32.833583208395808"/>
+        </scene>
+        <!--Premier League Detail View View Controller-->
+        <scene sceneID="gol-Ad-q8j">
+            <objects>
+                <viewController id="Xvx-Dw-GmU" customClass="PremierLeagueDetailViewViewController" customModule="LiveScoresApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSu-OC-5cl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eE-fo-A5f">
+                                <rect key="frame" x="0.0" y="31" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltd-Rp-lZP">
+                                <rect key="frame" x="0.0" y="72" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuH-wB-rkq">
+                                <rect key="frame" x="0.0" y="113" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ltd-Rp-lZP" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" id="3LH-0w-ds3"/>
+                            <constraint firstItem="Ltd-Rp-lZP" firstAttribute="top" secondItem="7eE-fo-A5f" secondAttribute="bottom" constant="20" id="7xp-6B-cAb"/>
+                            <constraint firstItem="7eE-fo-A5f" firstAttribute="top" secondItem="T93-64-OnE" secondAttribute="top" constant="11" id="A3Z-Cj-d7P"/>
+                            <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="Ltd-Rp-lZP" secondAttribute="trailing" id="AcK-9K-6yK"/>
+                            <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="7eE-fo-A5f" secondAttribute="trailing" id="Bf8-v5-jsg"/>
+                            <constraint firstItem="7eE-fo-A5f" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" id="FrY-Ea-deN"/>
+                            <constraint firstItem="OuH-wB-rkq" firstAttribute="top" secondItem="Ltd-Rp-lZP" secondAttribute="bottom" constant="20" id="VIu-X7-BS2"/>
+                            <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="OuH-wB-rkq" secondAttribute="trailing" id="XFg-oG-a45"/>
+                            <constraint firstItem="OuH-wB-rkq" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" id="lyH-2X-5C9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T93-64-OnE"/>
+                    </view>
+                    <connections>
+                        <outlet property="goalScorer" destination="OuH-wB-rkq" id="oGk-8u-GGl"/>
+                        <outlet property="match" destination="7eE-fo-A5f" id="P6F-jX-dMr"/>
+                        <outlet property="teamsFormation" destination="Ltd-Rp-lZP" id="fUF-kJ-R7K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pL-JM-av8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3992.8000000000002" y="-177.66116941529236"/>
         </scene>
         <!--Champions League View Controller-->
         <scene sceneID="Se0-Ak-BSR">
@@ -227,25 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7u-Vu-Np2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368.8" y="756.97151424287858"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hyI-cy-0gw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W1j-S2-uIx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H7k-5W-7CI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="txH-Ok-d20"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nju-8r-h3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-551.20000000000005" y="118.29085457271366"/>
+            <point key="canvasLocation" x="2308" y="756.97151424287858"/>
         </scene>
     </scenes>
 </document>

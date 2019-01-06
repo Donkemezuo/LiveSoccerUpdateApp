@@ -30,6 +30,7 @@
 		0453D56A21D8336C0019E645 /* LeaguesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56921D8336C0019E645 /* LeaguesCollectionViewCell.swift */; };
 		0453D56C21D845A50019E645 /* PreferedLeagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56B21D845A50019E645 /* PreferedLeagues.swift */; };
 		04A6C9FB21E168940044350F /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C9FA21E168940044350F /* song.mp3 */; };
+		04A6C9FD21E18B430044350F /* PremierLeagueDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		0453D56921D8336C0019E645 /* LeaguesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0453D56B21D845A50019E645 /* PreferedLeagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferedLeagues.swift; sourceTree = "<group>"; };
 		04A6C9FA21E168940044350F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song.mp3; path = ../../../song.mp3; sourceTree = "<group>"; };
+		04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueDetailViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0453D54D21D831440019E645 /* SoccerLiveViewController.swift */,
 				04052A2B21DD6EDE00DC344D /* ChampionsLeagueViewController.swift */,
 				04052A2521DC745C00DC344D /* LeagueTableViewController.swift */,
+				04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				0453D56A21D8336C0019E645 /* LeaguesCollectionViewCell.swift in Sources */,
 				0453D56421D832790019E645 /* TopLeagues.swift in Sources */,
 				0453D54C21D831440019E645 /* AppDelegate.swift in Sources */,
+				04A6C9FD21E18B430044350F /* PremierLeagueDetailViewViewController.swift in Sources */,
 				04052A2421DC707900DC344D /* LeagueTableViewCell.swift in Sources */,
 				043E98E821D87B3500298E73 /* ChampionsLeagueTeamsAndGroups.swift in Sources */,
 			);

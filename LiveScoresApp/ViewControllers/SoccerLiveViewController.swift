@@ -140,7 +140,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
+ 
     
     private func preferedLeague() {
         SoccerLiveAPIClient.preferedLeagues { (error, preferedLeague) in
