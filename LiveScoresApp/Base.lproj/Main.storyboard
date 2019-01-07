@@ -25,28 +25,38 @@
                                 <rect key="frame" x="0.0" y="420" width="375" height="247"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jhb-Vy-Yww">
-                                    <size key="itemSize" width="114" height="118"/>
+                                    <size key="itemSize" width="172" height="163"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OnQ-Dx-a4k">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LeagueCell" id="bQb-1t-HDR" customClass="LeaguesCollectionViewCell" customModule="LiveScoresApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="118"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="163"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="114" height="118"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-38-eVR">
-                                                    <rect key="frame" x="36" y="29" width="42" height="60"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-38-eVR">
+                                                    <rect key="frame" x="64" y="29" width="44.5" height="105"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="TimesNewRomanPS-BoldMT"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" red="1" green="0.075391222650000006" blue="0.36079484760000002" alpha="0.4785423801" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="bRZ-38-eVR" firstAttribute="centerX" secondItem="bQb-1t-HDR" secondAttribute="centerX" id="M3p-WG-79p"/>
                                             <constraint firstItem="bRZ-38-eVR" firstAttribute="centerY" secondItem="bQb-1t-HDR" secondAttribute="centerY" id="VgI-HS-mUp"/>
@@ -74,13 +84,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="wSb-AA-nJd"/>
                     <connections>
+                        <outlet property="ballImage" destination="OnQ-Dx-a4k" id="UrD-5a-Htu"/>
                         <outlet property="imageScrolView" destination="He4-Ad-Xnt" id="UIO-xZ-Fbl"/>
                         <outlet property="leaguesCollection" destination="YCG-Ud-LLV" id="S1E-xV-sri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="118"/>
+            <point key="canvasLocation" x="1573.5999999999999" y="117.39130434782609"/>
         </scene>
         <!--League Table View Controller-->
         <scene sceneID="NzA-Ud-aC2">

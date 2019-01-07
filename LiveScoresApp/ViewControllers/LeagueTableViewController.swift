@@ -93,8 +93,6 @@ class LeagueTableViewController: UIViewController {
     
 }
 
-
-
 extension LeagueTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return leagueStanding.count
@@ -103,7 +101,7 @@ extension LeagueTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = leagueTableView.dequeueReusableCell(withIdentifier: "LeagueTableCell", for: indexPath)
         
-        let leagueStandings = leagueStanding[indexPath.row]
+        let leagueStandings = leagueStanding.sorted{$0.overall_league_PTS > $1.overall_league_PTS}[indexPath.row]
         cell.detailTextLabel?.text = "Points: \( leagueStandings.overall_league_PTS)"
         cell.textLabel?.text = leagueStandings.team_name
         return cell

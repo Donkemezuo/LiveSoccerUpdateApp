@@ -27,7 +27,6 @@ class ChampionsLeagueViewController: UIViewController {
     var allLeagueGroups:[[GroupStats]] = [[]] {
         didSet {
             DispatchQueue.main.async {
-                self.championsLeagueTableView.reloadData()
             }
           
         }
@@ -38,7 +37,7 @@ class ChampionsLeagueViewController: UIViewController {
     var championsLeagueGroupss = [GroupStats](){
         didSet {
             DispatchQueue.main.async {
-                self.championsLeagueTableView.reloadData()
+           self.championsLeagueTableView.reloadData()
             }
         }
     }

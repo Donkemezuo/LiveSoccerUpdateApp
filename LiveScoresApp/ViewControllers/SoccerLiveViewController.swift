@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var leaguesCollection: UICollectionView!
    
     @IBOutlet weak var imageScrolView: UIScrollView!
- 
+    @IBOutlet weak var ballImage: UIImageView!
+    
     
     
     var topLeagues = ["Premier League", "Champions League", "Europa League", "Spanish League", "Bundesliga","Italy"]
@@ -46,6 +47,10 @@ class ViewController: UIViewController {
         }
     }
     
+    private func setCellBackground(){
+    ballImage.image = UIImage.init(named: "ball")
+    }
+    
     
     
     
@@ -58,6 +63,7 @@ class ViewController: UIViewController {
         leaguesCollection.dataSource = self
         title = "Leagues"
         preferedLeague()
+        setCellBackground()
         images = createImages()
         imageScrolView.delegate = self
         setUpScrollView(slide: images)
@@ -70,7 +76,7 @@ class ViewController: UIViewController {
         }
         
         
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(autoScroll), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(autoScroll), userInfo: nil, repeats: true)
     }
     
     
@@ -106,8 +112,43 @@ class ViewController: UIViewController {
         image6.imageAnimation.image = UIImage(named: "soccer6")
         let image7: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
         image7.imageAnimation.image = UIImage(named: "soccer7")
+        let image8: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image8.imageAnimation.image = UIImage(named: "aguero")
+        let image9: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image9.imageAnimation.image = UIImage(named: "bolt")
+        let image10: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image10.imageAnimation.image = UIImage(named: "crd")
+        let image11: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image11.imageAnimation.image = UIImage(named: "mecci")
+        let image12: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image12.imageAnimation.image = UIImage(named: "suarez")
+        let image13: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image13.imageAnimation.image = UIImage(named: "salah")
+        let image14: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image14.imageAnimation.image = UIImage(named: "juveee")
+        let image15: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image15.imageAnimation.image = UIImage(named: "ronaldoo")
+        let image16: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image16.imageAnimation.image = UIImage(named: "mussa")
+        let image17: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image17.imageAnimation.image = UIImage(named: "musaa")
+        let image18: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image18.imageAnimation.image = UIImage(named: "ddd")
+        let image19: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image19.imageAnimation.image = UIImage(named: "mesci")
+        let image20: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image20.imageAnimation.image = UIImage(named: "salahh")
+        let image21: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image21.imageAnimation.image = UIImage(named: "messi")
+        let image22: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image22.imageAnimation.image = UIImage(named: "suarezz")
+        let image23: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image23.imageAnimation.image = UIImage(named: "usain")
+        let image24: Animation = Bundle.main.loadNibNamed("BackgroundViewAnimation", owner: self, options: nil)?.first as! Animation
+        image24.imageAnimation.image = UIImage(named: "lionnel")
         
-        return [image1,image2,image3,image4,image5,image6,image7]
+        
+        return [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,image21,image22,image23,image24]
     }
     
     var offset: CGFloat = 0
@@ -122,7 +163,7 @@ class ViewController: UIViewController {
         }
         
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 0, delay: 5, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            UIView.animate(withDuration: 0, delay: 3, options: UIView.AnimationOptions.curveEaseOut, animations: {
                 self.imageScrolView.contentOffset.x = CGFloat(self.offset)
             }, completion: nil)
         }
@@ -198,7 +239,7 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = leaguesCollection.dequeueReusableCell(withReuseIdentifier: "LeagueCell", for: indexPath) as? LeaguesCollectionViewCell else {return UICollectionViewCell()}
         
         let leagueToSet = myPreferedLeagues.sorted()[indexPath.row]
-        cell.backgroundColor = .yellow
+//        cell.backgroundColor = .green
         cell.leagueName.text = leagueToSet
         
         return cell
