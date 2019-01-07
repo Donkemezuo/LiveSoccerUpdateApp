@@ -113,6 +113,23 @@ final class SoccerLiveAPIClient {
             }
         }
     }
+    
+    static func sportNews(completionHandler:@escaping(Error?,SportNews?) -> Void){
+        let urlString = "https://newsapi.org/v2/top-headlines?sources=bbc-sport&apiKey=\(SecretKeys.newsAPIKey)"
+        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, news) in
+            if let error = error {
+                completionHandler(error, nil)
+            } else if let news = news {
+                do {
+                    let sportnews = try JSONDecoder().decode(SportNews.self, from: news)
+                    completionHandler(nil,sportnews)
+                   
+                }catch {
+                    completionHandler(error,nil)
+                }
+            }
+        }
+    }
 
     
 }

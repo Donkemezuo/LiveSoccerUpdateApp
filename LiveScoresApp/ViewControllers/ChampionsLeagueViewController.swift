@@ -108,9 +108,7 @@ func getLeagueData() {
                     if let error = error {
                         print("Error: \(error)")
                     } else if let data = data {
-                        for champGroup in data {
-                            self.championsLeagueGroupss.append(champGroup)
-                        }
+                        self.championsLeagueGroupss = data
                         for group in self.championsLeagueGroupss {
                             if group.league_name == "Group A"{
                                 self.groupA.append(group)
@@ -154,8 +152,9 @@ extension ChampionsLeagueViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = championsLeagueTableView.dequeueReusableCell(withIdentifier: "ChampionsLeagueCell", for: indexPath)
         let league = allLeagueGroups[indexPath.section]
-        let groupToDisplay = league[indexPath.row]
+        let groupToDisplay = league.sorted{$0.overall_league_PTS > $1.overall_league_PTS}[indexPath.row]
         cell.textLabel?.text = groupToDisplay.team_name
+        cell.detailTextLabel?.text = groupToDisplay.overall_league_PTS
         return cell
         
     }
