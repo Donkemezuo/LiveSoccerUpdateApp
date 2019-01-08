@@ -217,12 +217,13 @@ extension ViewController: UICollectionViewDelegate{
         case 4:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let premireVC = storyboard.instantiateViewController(withIdentifier: "premierLeague") as! LeagueTableViewController
-            present(premireVC, animated: true, completion: nil)
+            navigationController?.pushViewController(premireVC, animated: true)
+            
             
         case 1:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let championsLeagueVC = storyboard.instantiateViewController(withIdentifier: "ChampionsLeague") as! ChampionsLeagueViewController
-            present(championsLeagueVC, animated: true, completion: nil)
+         navigationController?.pushViewController(championsLeagueVC, animated: true)
         default:
             print("whoops")
         }

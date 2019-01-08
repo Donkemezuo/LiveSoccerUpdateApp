@@ -12,7 +12,7 @@ final class SoccerLiveAPIClient {
     
     static func soccerLeagues(completionHandler: @escaping (Error?,[TopLeaguesDetails]?) -> Void){
         let urlString = "https://apifootball.com/api/?action=get_leagues&country_id=&APIkey=\(SecretKeys.APIKey)"
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod:"GET") { (error, data) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod:"GET") { (error, data, httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data {
@@ -30,7 +30,7 @@ final class SoccerLiveAPIClient {
     
     static func preferedLeagues(completionHandler: @escaping (Error?, [PreferedLeagueDetails]?) -> Void){
         let urlString = "https://apifootball.com/api/?action=get_leagues&APIkey=\(SecretKeys.APIKey)"
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data,httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data {
@@ -48,7 +48,7 @@ final class SoccerLiveAPIClient {
     
     static func premierLeagueTable(completionHandler: @escaping(Error?,[TeamStandings]?) -> Void){
         let urlString = "https://apifootball.com/api/?action=get_standings&league_id=62&APIkey=\(SecretKeys.APIKey)"
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data,httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data {
@@ -66,7 +66,7 @@ final class SoccerLiveAPIClient {
     static func championsLeague(completionHandler: @escaping (Error?, [ChampionsLeagueGroups]?) -> Void){
         let urlString = "https://apifootball.com/api/?action=get_leagues&country_id=163&APIkey=\(SecretKeys.APIKey)"
         
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data,httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data {
@@ -82,7 +82,7 @@ final class SoccerLiveAPIClient {
     
     static func championsLeagueGroupTable(groupID:String, completionHandler: @escaping(Error?,[GroupStats]?) -> Void){
         let urlString = "https://apifootball.com/api/?action=get_standings&league_id=\(groupID)&APIkey=\(SecretKeys.APIKey)"
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data,httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data {
@@ -100,7 +100,7 @@ final class SoccerLiveAPIClient {
     
     static func premierLeagueEvents(completionHandler: @escaping(Error?,[Events]?) -> Void){
         let urlString = "https://apifootball.com/api/?action=get_events&from=2018-07-10&to=2019-05-14&league_id=62&APIkey=\(SecretKeys.APIKey)"
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data,httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data{
@@ -116,7 +116,7 @@ final class SoccerLiveAPIClient {
     
     static func sportNews(completionHandler:@escaping(Error?,SportNews?) -> Void){
         let urlString = "https://newsapi.org/v2/top-headlines?sources=bbc-sport&apiKey=\(SecretKeys.newsAPIKey)"
-        NetworkHelper.performDataTask(urlString: urlString, httpMethod: "GET") { (error, news) in
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, news,httpResponse) in
             if let error = error {
                 completionHandler(error, nil)
             } else if let news = news {

@@ -13,5 +13,6 @@ class SportNewsCellTableViewCell: UITableViewCell {
     @IBOutlet weak var headLineImage: UIImageView!
     
     @IBOutlet weak var newsHeadLine: UILabel!
+    @IBOutlet weak var newsDescription: UILabel!
     
 }

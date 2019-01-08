@@ -10,14 +10,14 @@ import UIKit
 
 class LeagueTableViewController: UIViewController {
     
-       var topLeagues = ["Premier League", "Champions League", "Europa League", "Spanish League", "Bundesliga","Italy"]
-
+    var topLeagues = ["Premier League", "Champions League", "Europa League", "Spanish League", "Bundesliga","Italy"]
+    
     @IBOutlet weak var leagueImage: UIImageView!
     @IBOutlet weak var leagueTableView: UITableView!
     
     var leagueStanding = [TeamStandings]() {
         didSet {
-            leagueTableView.reloadData()
+            //eagueTableView.reloadData()
         }
     }
     
@@ -29,7 +29,7 @@ class LeagueTableViewController: UIViewController {
             }
         }
     }
-   
+    
     
     
     
@@ -38,6 +38,7 @@ class LeagueTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         leagueTableView.dataSource = self
+        
         getData()
         title = "Premier League Table"
         backgroundView()
@@ -49,9 +50,7 @@ class LeagueTableViewController: UIViewController {
             if let error = error {
                 print("Error: \(error)")
             } else if let leagueStanding = leagueStanding{
-                DispatchQueue.main.async {
-                    self.leagueStanding = leagueStanding
-                }
+                self.leagueStanding = leagueStanding
                 
             }
         }
@@ -63,7 +62,7 @@ class LeagueTableViewController: UIViewController {
                 print("Error: \(appError)")
             } else if let leagueEvents = leagueEvents {
                 self.leagueEvent = leagueEvents
-                
+                dump(self.leagueEvent)
             }
             
         }
@@ -86,7 +85,7 @@ class LeagueTableViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let eventIndexPath = leagueTableView.indexPathForSelectedRow, let eventsDetails = segue.destination as? PremierLeagueDetailViewViewController else {return}
-        let event = leagueEvent[eventIndexPath.row]
+        let event = leagueStanding[eventIndexPath.row]
         eventsDetails.leagueEventt = event
     }
     
@@ -99,7 +98,7 @@ extension LeagueTableViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = leagueTableView.dequeueReusableCell(withIdentifier: "LeagueTableCell", for: indexPath)
+        let cell = leagueTableView.dequeueReusableCell(withIdentifier: "LeagueTableCell", for: indexPath)
         
         let leagueStandings = leagueStanding.sorted{$0.overall_league_PTS > $1.overall_league_PTS}[indexPath.row]
         cell.detailTextLabel?.text = "Points: \( leagueStandings.overall_league_PTS)"

@@ -25,4 +25,20 @@ struct TeamStandings: Codable {
     var overall_league_PTS: String
     var overall_league_GF: String
     var overall_league_GA: String
+    var home_league_position: String
+    var home_league_W: String
+    var home_league_D: String
+    var home_league_L: String
+    var home_league_GF: String
+    var home_league_GA: String
+    var away_league_W: String
+    var away_league_D: String
+    var away_league_L: String
+    var away_league_GF: String
+    var away_league_GA: String
+
+    
+    
+    
+    
 }

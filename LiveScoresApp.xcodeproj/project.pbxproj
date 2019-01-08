@@ -34,6 +34,9 @@
 		04A6CA0121E3B9E50044350F /* SportNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6CA0021E3B9E50044350F /* SportNewsModel.swift */; };
 		04A6CA0521E3CB2B0044350F /* SportNewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6CA0421E3CB2B0044350F /* SportNewsCellTableViewCell.swift */; };
 		04A6CA0721E3CD250044350F /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A6CA0621E3CD250044350F /* song.mp3 */; };
+		04A6CA0921E3D8990044350F /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6CA0821E3D8990044350F /* ImageHelper.swift */; };
+		04A6CA0B21E3EF5D0044350F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6CA0A21E3EF5D0044350F /* AppError.swift */; };
+		04A6CA0D21E440780044350F /* SportNewsDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6CA0C21E440780044350F /* SportNewsDetailViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		04A6CA0021E3B9E50044350F /* SportNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportNewsModel.swift; sourceTree = "<group>"; };
 		04A6CA0421E3CB2B0044350F /* SportNewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportNewsCellTableViewCell.swift; sourceTree = "<group>"; };
 		04A6CA0621E3CD250044350F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = SOURCE_ROOT; };
+		04A6CA0821E3D8990044350F /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		04A6CA0A21E3EF5D0044350F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		04A6CA0C21E440780044350F /* SportNewsDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportNewsDetailViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 				0453D55F21D831C90019E645 /* SecretKeys.swift */,
 				04052A2721DD36F800DC344D /* BackGroundAnimation.swift */,
 				0453D55D21D831B70019E645 /* NetworkHelper.swift */,
+				04A6CA0821E3D8990044350F /* ImageHelper.swift */,
+				04A6CA0A21E3EF5D0044350F /* AppError.swift */,
 				0453D56121D8321B0019E645 /* SoccerLiveAPIClient.swift */,
 				04A6CA0621E3CD250044350F /* song.mp3 */,
 			);
@@ -118,6 +126,7 @@
 				04052A2B21DD6EDE00DC344D /* ChampionsLeagueViewController.swift */,
 				04052A2521DC745C00DC344D /* LeagueTableViewController.swift */,
 				04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */,
+				04A6CA0C21E440780044350F /* SportNewsDetailViewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,12 +249,15 @@
 				0453D56021D831C90019E645 /* SecretKeys.swift in Sources */,
 				0453D56621D8329E0019E645 /* SoccerLeaguesModel.swift in Sources */,
 				0453D55E21D831B70019E645 /* NetworkHelper.swift in Sources */,
+				04A6CA0D21E440780044350F /* SportNewsDetailViewViewController.swift in Sources */,
 				0453D56C21D845A50019E645 /* PreferedLeagues.swift in Sources */,
+				04A6CA0921E3D8990044350F /* ImageHelper.swift in Sources */,
 				04052A2E21DD70F200DC344D /* ChampionsLeagueCellTableViewCell.swift in Sources */,
 				0453D56821D832C00019E645 /* LeagueEvents.swift in Sources */,
 				0453D56A21D8336C0019E645 /* LeaguesCollectionViewCell.swift in Sources */,
 				0453D56421D832790019E645 /* TopLeagues.swift in Sources */,
 				0453D54C21D831440019E645 /* AppDelegate.swift in Sources */,
+				04A6CA0B21E3EF5D0044350F /* AppError.swift in Sources */,
 				04A6C9FD21E18B430044350F /* PremierLeagueDetailViewViewController.swift in Sources */,
 				04052A2421DC707900DC344D /* LeagueTableViewCell.swift in Sources */,
 				043E98E821D87B3500298E73 /* ChampionsLeagueTeamsAndGroups.swift in Sources */,

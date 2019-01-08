@@ -10,6 +10,7 @@ import UIKit
 
 class SportNewsViewController: UIViewController {
     @IBOutlet weak var sportNewsTableView: UITableView!
+    
     var sportNews: SportNews?{
         didSet {
             DispatchQueue.main.async {
@@ -36,6 +37,13 @@ class SportNewsViewController: UIViewController {
             }
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let news = sportNewsTableView.indexPathForSelectedRow, let newsInfo = segue.destination as? SportNewsDetailViewViewController else {return}
+        let newss = sportNews?.articles[news.row]
+        newsInfo.sportNews = newss
+    }
 
 }
 
@@ -48,6 +56,16 @@ extension SportNewsViewController: UITableViewDataSource{
         guard let cell = sportNewsTableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as? SportNewsCellTableViewCell else {return UITableViewCell()}
         let sportNewss = sportNews?.articles[indexPath.row]
         cell.newsHeadLine.text = sportNewss?.title
+        cell.newsDescription.text = "Trending: \(sportNewss!.description)"
+        //cell.headLineImage = UIImage.
+      
+        ImageHelper.shared.fetchImage(urlString: sportNewss?.urlToImage.absoluteString ?? "") { (error, data) in
+            if let error = error {
+                print("Error: \(error)")
+            } else if let image = data {
+                cell.headLineImage.image = image
+            }
+        }
         return cell
     }
     
