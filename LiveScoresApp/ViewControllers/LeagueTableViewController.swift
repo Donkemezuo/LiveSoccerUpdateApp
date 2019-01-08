@@ -17,7 +17,7 @@ class LeagueTableViewController: UIViewController {
     
     var leagueStanding = [TeamStandings]() {
         didSet {
-            //eagueTableView.reloadData()
+          
         }
     }
     
@@ -62,7 +62,6 @@ class LeagueTableViewController: UIViewController {
                 print("Error: \(appError)")
             } else if let leagueEvents = leagueEvents {
                 self.leagueEvent = leagueEvents
-                dump(self.leagueEvent)
             }
             
         }

@@ -57,8 +57,7 @@ extension SportNewsViewController: UITableViewDataSource{
         let sportNewss = sportNews?.articles[indexPath.row]
         cell.newsHeadLine.text = sportNewss?.title
         cell.newsDescription.text = "Trending: \(sportNewss!.description)"
-        //cell.headLineImage = UIImage.
-      
+        
         ImageHelper.shared.fetchImage(urlString: sportNewss?.urlToImage.absoluteString ?? "") { (error, data) in
             if let error = error {
                 print("Error: \(error)")

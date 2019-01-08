@@ -60,6 +60,13 @@ class SportNewsDetailViewViewController: UIViewController {
             newsPublishedDate.text = sportNews.publishedAt
             NewsContent.text = sportNews.content
             linkToFullNews.text = sportNews.url
+            ImageHelper.shared.fetchImage(urlString: sportNews?.urlToImage.absoluteString ?? "") { (error, data) in
+                if let error = error {
+                    print("Error: \(error)")
+                } else if let image = data {
+                    self.newsImage.image = image
+                }
+            }
         }
         
         

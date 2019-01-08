@@ -354,10 +354,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dUz-on-m37">
-                                <rect key="frame" x="10" y="31" width="355" height="292"/>
+                                <rect key="frame" x="10" y="31" width="355" height="272"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-tO-3X3">
-                                <rect key="frame" x="11" y="323" width="353" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-tO-3X3">
+                                <rect key="frame" x="11" y="303" width="353" height="41"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -368,8 +368,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4w-cP-pTi">
-                                <rect key="frame" x="10" y="354" width="183" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4w-cP-pTi">
+                                <rect key="frame" x="10" y="355" width="183" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -380,8 +380,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9O-JP-QLy">
-                                <rect key="frame" x="193" y="354" width="172" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9O-JP-QLy">
+                                <rect key="frame" x="193" y="355" width="172" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -392,8 +392,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De2-em-8f1">
-                                <rect key="frame" x="10" y="385" width="183" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De2-em-8f1">
+                                <rect key="frame" x="10" y="386" width="183" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -416,8 +416,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F27-aK-WgM">
-                                <rect key="frame" x="10" y="417" width="183" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F27-aK-WgM">
+                                <rect key="frame" x="10" y="417" width="183" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -438,8 +438,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR6-1e-Etn">
-                                <rect key="frame" x="10" y="449" width="183" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR6-1e-Etn">
+                                <rect key="frame" x="10" y="448" width="183" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -460,10 +460,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="1lc-b1-ar8">
+                                <rect key="frame" x="0.0" y="469" width="375" height="198"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1lc-b1-ar8" secondAttribute="bottom" id="0qD-Bk-5yQ"/>
                             <constraint firstItem="581-bD-svD" firstAttribute="top" secondItem="LJ8-rz-42j" secondAttribute="bottom" constant="11" id="1W7-HM-dHy"/>
+                            <constraint firstItem="1lc-b1-ar8" firstAttribute="top" secondItem="581-bD-svD" secondAttribute="bottom" id="4es-Zh-CEh"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="s5n-tO-3X3" secondAttribute="trailing" constant="11" id="6QF-7x-2L9"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="c9O-JP-QLy" secondAttribute="trailing" constant="10" id="7qp-g7-m4u"/>
                             <constraint firstItem="s5n-tO-3X3" firstAttribute="top" secondItem="dUz-on-m37" secondAttribute="bottom" id="7rT-x3-8kD"/>
@@ -471,7 +476,7 @@
                             <constraint firstItem="c9O-JP-QLy" firstAttribute="top" secondItem="s5n-tO-3X3" secondAttribute="bottom" constant="11" id="CaG-sf-Aon"/>
                             <constraint firstItem="RZA-iy-sXj" firstAttribute="top" secondItem="c9O-JP-QLy" secondAttribute="bottom" constant="11" id="F7k-dd-G2c"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="581-bD-svD" secondAttribute="trailing" constant="10" id="FGT-0Z-3Mj"/>
-                            <constraint firstItem="T93-64-OnE" firstAttribute="bottom" secondItem="dUz-on-m37" secondAttribute="bottom" constant="300" id="Ghe-7u-uJv"/>
+                            <constraint firstItem="T93-64-OnE" firstAttribute="bottom" secondItem="dUz-on-m37" secondAttribute="bottom" constant="320" id="Ghe-7u-uJv"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="bottom" secondItem="c9O-JP-QLy" secondAttribute="bottom" constant="248" id="Gjv-vP-82f"/>
                             <constraint firstItem="Y4w-cP-pTi" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" constant="10" id="Gub-nj-U62"/>
                             <constraint firstItem="dUz-on-m37" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" constant="10" id="JXp-cC-Ciy"/>
@@ -480,6 +485,7 @@
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="LJ8-rz-42j" secondAttribute="trailing" constant="10" id="Sdx-gE-j1f"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="bottom" secondItem="RZA-iy-sXj" secondAttribute="bottom" constant="216" id="TLC-K8-gho"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="De2-em-8f1" secondAttribute="trailing" constant="182" id="W2s-e2-gaI"/>
+                            <constraint firstItem="1lc-b1-ar8" firstAttribute="leading" secondItem="SSu-OC-5cl" secondAttribute="leading" id="WfG-dV-Xxc"/>
                             <constraint firstItem="RZA-iy-sXj" firstAttribute="leading" secondItem="De2-em-8f1" secondAttribute="trailing" id="Wku-VE-k2m"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="F27-aK-WgM" secondAttribute="trailing" constant="182" id="Y2E-Cp-Cli"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="DR6-1e-Etn" secondAttribute="trailing" constant="182" id="YJY-w2-fYp"/>
@@ -493,6 +499,7 @@
                             <constraint firstItem="LJ8-rz-42j" firstAttribute="top" secondItem="RZA-iy-sXj" secondAttribute="bottom" constant="11" id="nRv-56-ICP"/>
                             <constraint firstItem="De2-em-8f1" firstAttribute="top" secondItem="Y4w-cP-pTi" secondAttribute="bottom" constant="11" id="o36-uT-pKv"/>
                             <constraint firstItem="s5n-tO-3X3" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" constant="11" id="qh1-9K-Y7K"/>
+                            <constraint firstAttribute="trailing" secondItem="1lc-b1-ar8" secondAttribute="trailing" id="rE0-v3-Vnx"/>
                             <constraint firstItem="F27-aK-WgM" firstAttribute="leading" secondItem="T93-64-OnE" secondAttribute="leading" constant="10" id="tRf-jF-fC2"/>
                             <constraint firstItem="T93-64-OnE" firstAttribute="trailing" secondItem="Y4w-cP-pTi" secondAttribute="trailing" constant="182" id="upU-fh-Dgq"/>
                             <constraint firstItem="F27-aK-WgM" firstAttribute="top" secondItem="De2-em-8f1" secondAttribute="bottom" constant="11" id="xlY-pg-Z5E"/>
@@ -500,6 +507,7 @@
                         <viewLayoutGuide key="safeArea" id="T93-64-OnE"/>
                     </view>
                     <connections>
+                        <outlet property="datePickerView" destination="1lc-b1-ar8" id="gVk-Jp-7o6"/>
                         <outlet property="teamAwayDraws" destination="RZA-iy-sXj" id="uEW-Zg-rfa"/>
                         <outlet property="teamAwayLoss" destination="LJ8-rz-42j" id="CuG-3x-sWL"/>
                         <outlet property="teamAwayWins" destination="c9O-JP-QLy" id="PI7-5H-cfb"/>

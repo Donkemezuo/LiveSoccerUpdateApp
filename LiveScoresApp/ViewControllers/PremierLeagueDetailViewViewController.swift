@@ -9,10 +9,20 @@
 import UIKit
 
 class PremierLeagueDetailViewViewController: UIViewController {
-
+    @IBOutlet weak var datePickerView: UIPickerView!
+    
     var leagueEventt: TeamStandings!
 
+    var names = ["Raymond","Lion","Legend","Living"]
+    
     var teamStandingg = [TeamStandings]()
+    var upcomingMatches = [Events]()
+    var date = [String]() {
+        didSet {
+            
+        }
+    }
+
     
     @IBOutlet weak var teamImage: UIImageView!
     
@@ -32,7 +42,10 @@ class PremierLeagueDetailViewViewController: UIViewController {
         super.viewDidLoad()
         getLeagueData()
         setDetailView()
-
+        getUpcomingMatches()
+        datePickerView.delegate = self
+        datePickerView.dataSource = self
+   
     }
     
     
@@ -48,7 +61,7 @@ class PremierLeagueDetailViewViewController: UIViewController {
     
     
     func setDetailView(){
-        teamName.text = leagueEventt.team_name
+        teamName.text = "\(leagueEventt.team_name) FC"
         teamHomeWins.text = "Home Wins: \(leagueEventt.home_league_W)"
         teamAwayWins.text = "Away Wins: \(leagueEventt.away_league_W)"
         teamHomeDraws.text = "Home Draws: \(leagueEventt.home_league_D)"
@@ -111,6 +124,40 @@ class PremierLeagueDetailViewViewController: UIViewController {
         
 
     }
+    
+    
+    
+    func getUpcomingMatches(){
+        
+        SoccerLiveAPIClient.premierLeagueEvents { (error, matchDay) in
+            if let error = error{
+                print("Error: \(error)")
+            } else if let matchDay = matchDay{
+                for Date in matchDay {
+                    if !self.date.contains(Date.match_date){
+                    self.date.append(Date.match_date)
+                }
+            }
+        }
+        }
+        
+    }
+   
 
 
+}
+
+extension PremierLeagueDetailViewViewController: UIPickerViewDataSource,UIPickerViewDelegate{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+       return date.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return date[row]
+    }
+    
+    
 }
