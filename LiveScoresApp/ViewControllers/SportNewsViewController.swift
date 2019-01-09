@@ -42,7 +42,7 @@ class SportNewsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let news = sportNewsTableView.indexPathForSelectedRow, let newsInfo = segue.destination as? SportNewsDetailViewViewController else {return}
         let newss = sportNews?.articles[news.row]
-        newsInfo.sportNews = newss
+       newsInfo.sportsArticle = newss
     }
 
 }

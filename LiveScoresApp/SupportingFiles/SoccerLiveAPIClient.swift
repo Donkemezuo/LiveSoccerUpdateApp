@@ -86,12 +86,27 @@ final class SoccerLiveAPIClient {
             if let error = error {
                 completionHandler(error, nil)
             } else if let data = data {
-                dump(data)
                 do{
                     let groups = try JSONDecoder().decode([GroupStats].self, from: data)
                     completionHandler(nil, groups)
                 } catch {
                     completionHandler(error, nil)
+                }
+            }
+        }
+    }
+    
+    static func premierLeagueMatches(matchDate: String, completionHandler: @escaping(Error?, [Events]?) -> Void){
+        let urlString = "https://apifootball.com/api/?action=get_events&from=\(matchDate)&to=2019-05-14&league_id=62&APIkey=\(SecretKeys.APIKey)"
+        NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data, httpResponse) in
+            if let error = error {
+                completionHandler(error,nil)
+            } else if let data = data {
+                do {
+                    let matchDay = try JSONDecoder().decode([Events].self,from: data)
+                    completionHandler(nil, matchDay)
+                } catch {
+                    completionHandler(error,nil)
                 }
             }
         }

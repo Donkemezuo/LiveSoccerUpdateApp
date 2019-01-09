@@ -17,7 +17,10 @@ class SportNewsDetailViewViewController: UIViewController {
         }
     }
     
-    var sportNews: SportArticles!
+    var sportsArticle: SportArticles?
+    
+    
+    var sportNews = [SportArticles]()
 
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsHeadLine: UILabel!
@@ -29,38 +32,19 @@ class SportNewsDetailViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        getEventDetail()
         setDetailView()
-        // Do any additional setup after loading the view.
     }
-    
-    func getEventDetail(){
-        SoccerLiveAPIClient.sportNews {(error, sportNews) in
-            if let error = error {
-                print("Error: \(error)")
-            } else if let sportNews = sportNews {
-                self.sportNewsDetails = sportNews
-                
-            }
-        }
-        
-      
-    }
-    
-    
     
     func setDetailView(){
-        
-        for news in (sportNewsDetails.articles){
-            sportNews = news
-            newsHeadLine.text = sportNews.title
-            newsSource.text = sportNews.source.name
-            newsAuthor.text = sportNews.author
-            newsPublishedDate.text = sportNews.publishedAt
-            NewsContent.text = sportNews.content
-            linkToFullNews.text = sportNews.url
-            ImageHelper.shared.fetchImage(urlString: sportNews?.urlToImage.absoluteString ?? "") { (error, data) in
+        if let article = sportsArticle {
+            self.newsHeadLine.text = article.title
+            
+            newsSource.text = "Source: \(article.source.name)"
+            newsAuthor.text = "Author: \(article.author)"
+            newsPublishedDate.text = "Published Date: \(article.publishedAt)"
+             NewsContent.text = article.content
+            linkToFullNews.text = "Link to full article \( article.url ?? "no link")"
+            ImageHelper.shared.fetchImage(urlString: article.urlToImage.absoluteString ) { (error, data) in
                 if let error = error {
                     print("Error: \(error)")
                 } else if let image = data {
@@ -68,7 +52,11 @@ class SportNewsDetailViewViewController: UIViewController {
                 }
             }
         }
+    
         
+      
+        }
+    
         
         
     }
@@ -76,4 +64,4 @@ class SportNewsDetailViewViewController: UIViewController {
     
     
 
-}
+

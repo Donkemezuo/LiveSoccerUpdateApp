@@ -211,7 +211,7 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: UICollectionViewDelegate{
+extension ViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 4:
@@ -229,6 +229,13 @@ extension ViewController: UICollectionViewDelegate{
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize.init(width: 200, height: 200)
+    }
+    
+    
+    
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -240,7 +247,7 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = leaguesCollection.dequeueReusableCell(withReuseIdentifier: "LeagueCell", for: indexPath) as? LeaguesCollectionViewCell else {return UICollectionViewCell()}
         
         let leagueToSet = myPreferedLeagues.sorted()[indexPath.row]
-//        cell.backgroundColor = .green
+
         cell.leagueName.text = leagueToSet
         
         return cell

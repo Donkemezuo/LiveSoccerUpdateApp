@@ -14,12 +14,13 @@ class PremierLeagueDetailViewViewController: UIViewController {
     var leagueEventt: TeamStandings!
 
     var names = ["Raymond","Lion","Legend","Living"]
+    var month = String()
     
     var teamStandingg = [TeamStandings]()
     var upcomingMatches = [Events]()
     var date = [String]() {
         didSet {
-            
+            self.datePickerView.reloadAllComponents()
         }
     }
 
@@ -112,8 +113,6 @@ class PremierLeagueDetailViewViewController: UIViewController {
             teamImage.image = UIImage.init(named: "full")
         case "Huddersfield Town":
             teamImage.image = UIImage.init(named: "hudder")
-
-        
         default:
             print("Team has no image")
         
@@ -124,11 +123,7 @@ class PremierLeagueDetailViewViewController: UIViewController {
         
 
     }
-    
-    
-    
     func getUpcomingMatches(){
-        
         SoccerLiveAPIClient.premierLeagueEvents { (error, matchDay) in
             if let error = error{
                 print("Error: \(error)")
@@ -142,10 +137,8 @@ class PremierLeagueDetailViewViewController: UIViewController {
         }
         
     }
-   
-
-
 }
+
 
 extension PremierLeagueDetailViewViewController: UIPickerViewDataSource,UIPickerViewDelegate{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -158,6 +151,8 @@ extension PremierLeagueDetailViewViewController: UIPickerViewDataSource,UIPicker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return date[row]
     }
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        month = date[row]
+    }
     
 }

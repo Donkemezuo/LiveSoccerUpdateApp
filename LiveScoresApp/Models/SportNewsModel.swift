@@ -18,7 +18,7 @@ struct SportArticles: Codable {
     var author: String
     var title: String
     var description: String
-    var url: String
+    var url: String?
     var urlToImage:URL
     var publishedAt: String
     var content: String?
