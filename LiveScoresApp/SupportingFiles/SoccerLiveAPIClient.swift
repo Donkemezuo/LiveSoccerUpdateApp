@@ -96,8 +96,8 @@ final class SoccerLiveAPIClient {
         }
     }
     
-    static func premierLeagueMatches(matchDate: String, completionHandler: @escaping(Error?, [Events]?) -> Void){
-        let urlString = "https://apifootball.com/api/?action=get_events&from=\(matchDate)&to=2019-05-14&league_id=62&APIkey=\(SecretKeys.APIKey)"
+    static func premierLeagueMatches(FromDate: String,ToDate: String, completionHandler: @escaping(Error?, [Events]?) -> Void){
+        let urlString = "https://apifootball.com/api/?action=get_events&from=\(FromDate)&to=\(ToDate)&league_id=62&APIkey=a1003d792d2b16e81f5666426bff0cd58c1a1126325efe62626ad1499555737a"
         NetworkHelper.shared.performDataTask(urlString: urlString, httpMethod: "GET") { (error, data, httpResponse) in
             if let error = error {
                 completionHandler(error,nil)

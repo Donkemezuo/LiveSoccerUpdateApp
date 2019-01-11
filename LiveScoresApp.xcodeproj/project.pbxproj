@@ -29,6 +29,8 @@
 		0453D56821D832C00019E645 /* LeagueEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56721D832C00019E645 /* LeagueEvents.swift */; };
 		0453D56A21D8336C0019E645 /* LeaguesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56921D8336C0019E645 /* LeaguesCollectionViewCell.swift */; };
 		0453D56C21D845A50019E645 /* PreferedLeagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453D56B21D845A50019E645 /* PreferedLeagues.swift */; };
+		0495E41321E9000100B421CB /* ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0495E41221E9000000B421CB /* ball.jpg */; };
+		04A4843321E7CB050067542B /* MoreTeamInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4843221E7CB050067542B /* MoreTeamInformationViewController.swift */; };
 		04A6C9FD21E18B430044350F /* PremierLeagueDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */; };
 		04A6C9FF21E3B90E0044350F /* SportNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6C9FE21E3B90E0044350F /* SportNewsViewController.swift */; };
 		04A6CA0121E3B9E50044350F /* SportNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6CA0021E3B9E50044350F /* SportNewsModel.swift */; };
@@ -64,6 +66,8 @@
 		0453D56721D832C00019E645 /* LeagueEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueEvents.swift; sourceTree = "<group>"; };
 		0453D56921D8336C0019E645 /* LeaguesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionViewCell.swift; sourceTree = "<group>"; };
 		0453D56B21D845A50019E645 /* PreferedLeagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferedLeagues.swift; sourceTree = "<group>"; };
+		0495E41221E9000000B421CB /* ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ball.jpg; sourceTree = "<group>"; };
+		04A4843221E7CB050067542B /* MoreTeamInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTeamInformationViewController.swift; sourceTree = "<group>"; };
 		04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueDetailViewViewController.swift; sourceTree = "<group>"; };
 		04A6C9FE21E3B90E0044350F /* SportNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportNewsViewController.swift; sourceTree = "<group>"; };
 		04A6CA0021E3B9E50044350F /* SportNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportNewsModel.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				04052A2521DC745C00DC344D /* LeagueTableViewController.swift */,
 				04A6C9FC21E18B430044350F /* PremierLeagueDetailViewViewController.swift */,
 				04A6CA0C21E440780044350F /* SportNewsDetailViewViewController.swift */,
+				04A4843221E7CB050067542B /* MoreTeamInformationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				0453D55221D831460019E645 /* Assets.xcassets */,
 				0453D55421D831460019E645 /* LaunchScreen.storyboard */,
 				0453D55721D831460019E645 /* Info.plist */,
+				0495E41221E9000000B421CB /* ball.jpg */,
 			);
 			path = LiveScoresApp;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				04A6CA0721E3CD250044350F /* song.mp3 in Resources */,
 				0453D55321D831460019E645 /* Assets.xcassets in Resources */,
 				0453D55121D831440019E645 /* Main.storyboard in Resources */,
+				0495E41321E9000100B421CB /* ball.jpg in Resources */,
 				04052A2A21DD374400DC344D /* BackgroundViewAnimation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +252,7 @@
 				04052A2821DD36F800DC344D /* BackGroundAnimation.swift in Sources */,
 				04052A2621DC745C00DC344D /* LeagueTableViewController.swift in Sources */,
 				04052A2C21DD6EDE00DC344D /* ChampionsLeagueViewController.swift in Sources */,
+				04A4843321E7CB050067542B /* MoreTeamInformationViewController.swift in Sources */,
 				04A6CA0121E3B9E50044350F /* SportNewsModel.swift in Sources */,
 				0453D56021D831C90019E645 /* SecretKeys.swift in Sources */,
 				0453D56621D8329E0019E645 /* SoccerLeaguesModel.swift in Sources */,

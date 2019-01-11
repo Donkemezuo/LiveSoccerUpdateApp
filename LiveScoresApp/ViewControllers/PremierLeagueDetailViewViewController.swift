@@ -14,13 +14,18 @@ class PremierLeagueDetailViewViewController: UIViewController {
     var leagueEventt: TeamStandings!
 
     var names = ["Raymond","Lion","Legend","Living"]
+    var months = ["August","September", "October","November","December","January","February","March","April","May","June","July"]
     var month = String()
+    var teamNamee: String?
     
     var teamStandingg = [TeamStandings]()
     var upcomingMatches = [Events]()
     var date = [String]() {
         didSet {
-            self.datePickerView.reloadAllComponents()
+            DispatchQueue.main.async {
+                self.datePickerView.reloadAllComponents()
+            }
+            
         }
     }
 
@@ -146,13 +151,20 @@ extension PremierLeagueDetailViewViewController: UIPickerViewDataSource,UIPicker
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       return date.count
+       return months.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return date[row]
+        return months[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        month = date[row]
+        month = months[row]
+        
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "teamVC") as! MoreTeamInformationViewController
+        vc.date = month
+        vc.teamName = teamNamee
+        self.navigationController?.pushViewController(vc, animated: true)
+       // present(vc, animated: true)
     }
     
 }

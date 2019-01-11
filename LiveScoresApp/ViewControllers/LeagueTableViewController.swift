@@ -39,6 +39,7 @@ class LeagueTableViewController: UIViewController {
         super.viewDidLoad()
         leagueTableView.dataSource = self
         
+        
         getData()
         title = "Premier League Table"
         backgroundView()
@@ -86,6 +87,7 @@ class LeagueTableViewController: UIViewController {
         guard let eventIndexPath = leagueTableView.indexPathForSelectedRow, let eventsDetails = segue.destination as? PremierLeagueDetailViewViewController else {return}
         let event = leagueStanding[eventIndexPath.row]
         eventsDetails.leagueEventt = event
+        eventsDetails.teamNamee = event.team_name
     }
     
     
